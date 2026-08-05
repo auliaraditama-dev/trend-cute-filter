@@ -25,47 +25,6 @@ Setiap gesture akan memunculkan GIF, sticker, particle, dan animasi yang berbeda
 
 ---
 
-<style>
-
-h1{
-    color:#EC4899;
-}
-
-h2{
-    color:#8B5CF6;
-}
-
-.card{
-    background:#fafafa;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-    padding:18px;
-    margin:12px 0;
-}
-
-.box{
-    background:#fff7fb;
-    border-left:5px solid #EC4899;
-    padding:15px;
-    border-radius:10px;
-}
-
-.success{
-    background:#ecfdf5;
-    border-left:5px solid #10b981;
-    padding:15px;
-    border-radius:10px;
-}
-
-.warning{
-    background:#fff7ed;
-    border-left:5px solid #f59e0b;
-    padding:15px;
-    border-radius:10px;
-}
-
-</style>
-
 ---
 
 # ✨ Features
