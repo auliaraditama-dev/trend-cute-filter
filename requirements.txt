@@ -1,5 +1,5 @@
-opencv-python
-mediapipe
-numpy
-Pillow
-imageio
+opencv-python>=4.9,<5
+mediapipe>=0.10.14,<0.11
+numpy>=1.26,<3
+Pillow>=10,<13
+imageio>=2.34,<3
