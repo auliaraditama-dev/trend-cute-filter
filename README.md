@@ -2,105 +2,54 @@
 
 # 🎀 Trend Cute Filter
 
-### ✨ Real-time Cute Character & GIF Filter menggunakan Python, OpenCV, dan MediaPipe
-
-<p>
-Ubah gesture tangan menjadi filter karakter lucu secara real-time.
-Setiap gesture akan memunculkan GIF, sticker, particle, dan animasi yang berbeda layaknya filter TikTok, CapCut, atau Snapchat.
-</p>
-
-<br>
+### Real-time Gesture Controlled Emoji, PNG, Sticker, Image & GIF Filter
 
 <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python">
-<img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge">
+<img src="https://img.shields.io/badge/OpenCV-Realtime-green?style=for-the-badge">
 <img src="https://img.shields.io/badge/MediaPipe-Hand%20Tracking-orange?style=for-the-badge">
-<img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-success?style=for-the-badge">
-<img src="https://img.shields.io/badge/License-MIT-red?style=for-the-badge">
-
-<br><br>
-
-> 🎉 Gesture tangan ➜ Karakter Imut ➜ Animasi ➜ Particle ➜ Real-time Camera
+<img src="https://img.shields.io/badge/Customizable-100%25-ff69b4?style=for-the-badge">
 
 </div>
 
 ---
 
----
+## ✨ Features
 
-# ✨ Features
+- Real-time webcam
+- Hand tracking
+- 0–5 finger gesture detection
+- Gesture stabilization
+- Emoji filter
+- PNG/JPG/JPEG/WebP sticker filter
+- Animated GIF filter
+- Transparent alpha overlay
+- Fallback emoji when file asset is missing
+- Per-gesture custom filter mapping
+- Fade animation
+- Bounce animation
+- Floating animation
+- Optional rotation
+- Sparkle particles
+- Heart particles
+- Flower particles
+- Screenshot
+- Video recording
+- Runtime config reload
+- Toggle hand landmarks
+- GIF and image cache
+- Mirror camera
+- FPS counter
 
-<div class="card">
-
-| Feature                | Description                          |
-| ---------------------- | ------------------------------------ |
-| 🎥 Real-time Camera    | Webcam processing menggunakan OpenCV |
-| ✋ Hand Tracking       | Deteksi tangan dengan MediaPipe      |
-| 🤏 Gesture Recognition | Mengenali jumlah jari dan gesture    |
-| 🎀 Cute Character      | Sticker & karakter berubah otomatis  |
-| 🎞 Animated GIF        | GIF transparan berjalan real-time    |
-| ✨ Particle System     | Sparkle, Heart, Bubble, Flower       |
-| 🎨 Animation Engine    | Fade, Bounce, Scale, Floating        |
-| ⚡ High Performance    | Optimasi hingga 30–60 FPS            |
-| 📷 Screenshot Mode     | Simpan hasil filter                  |
-| 🎥 Video Recording     | Rekam video dengan filter            |
-
-</div>
-
----
-
-# 🎯 Demo
-
-```
-👍
-     ↓
-😊 Cute Smile
-
-✌️
-     ↓
-🐱 Cute Cat
-
-🖐
-     ↓
-🌸 Flower
-
-🤟
-     ↓
-🧸 Teddy
-
-✊
-     ↓
-🔥 Fire Effect
-```
-
----
-
-# 🛠 Tech Stack
-
-<div class="box">
-
-- 🐍 Python 3.11
-- 🎥 OpenCV
-- ✋ MediaPipe Hands
-- 🖼 Pillow
-- 🔢 NumPy
-- 🎞 ImageIO
-
-</div>
-
----
-
-# 📂 Project Structure
+## 📂 Structure
 
 ```text
 trend-cute-filter/
-│
 ├── assets/
 │   ├── gifs/
 │   ├── characters/
 │   ├── particles/
 │   ├── sounds/
 │   └── icons/
-│
 ├── src/
 │   ├── main.py
 │   ├── camera.py
@@ -115,160 +64,129 @@ trend-cute-filter/
 │   ├── effects.py
 │   ├── config.py
 │   └── utils.py
-│
 ├── output/
+├── config.json
 ├── requirements.txt
 └── README.md
 ```
 
----
-
-# 🚀 Installation
-
-Clone repository
-
-```bash
-git clone https://github.com/USERNAME/trend-cute-filter.git
-```
-
-Masuk ke folder project
-
-```bash
-cd trend-cute-filter
-```
-
-Buat virtual environment
+## 🚀 Setup
 
 ```bash
 python3 -m venv .venv
-```
-
-Aktifkan virtual environment
-
-### Windows (Git Bash)
-
-```bash
 source .venv/Scripts/activate
-```
-
-Install dependency
-
-```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
----
-
-# ▶️ Run
+## ▶️ Run
 
 ```bash
 python src/main.py
 ```
 
----
+## 🎛 Controls
 
-# 🎀 Gesture Mapping
+| Key | Action |
+|---|---|
+| Q | Quit |
+| S | Screenshot |
+| R | Start/stop recording |
+| C | Reload `config.json` |
+| L | Toggle MediaPipe landmarks |
 
-| Gesture | Character  |
-| ------- | ---------- |
-| ✊      | 🔥 Fire    |
-| ☝️      | 😊 Smile   |
-| ✌️      | 🐱 Cat     |
-| 🤟      | 🧸 Teddy   |
-| 🖖      | 🌸 Flower  |
-| 🖐      | ✨ Sparkle |
+## 🎨 Customize Filter
 
----
+Semua filter ada di `config.json`.
 
-# 🌟 Effects
+### Emoji
 
-- ✨ Sparkle
-- ❤️ Heart
-- 🌸 Sakura
-- 🫧 Bubble
-- 🎉 Confetti
-- ⭐ Glow
-- 💫 Floating Stars
-- 🌈 Rainbow
+```json
+"1": {
+  "name": "Smile",
+  "type": "emoji",
+  "value": "😊",
+  "particle": "sparkle"
+}
+```
 
----
+### PNG Sticker
 
-# 🎞 Animation
+Simpan file ke:
 
-- Fade In
-- Fade Out
-- Bounce
-- Scale
-- Floating
-- Rotation
-- Smooth Transition
-- Loop GIF
+```text
+assets/characters/my_sticker.png
+```
 
----
+Kemudian:
 
-# ⚙ Performance
+```json
+"2": {
+  "name": "My Sticker",
+  "type": "image",
+  "value": "assets/characters/my_sticker.png",
+  "fallback_emoji": "🐱",
+  "particle": "heart"
+}
+```
 
-<div class="success">
+### GIF
 
-✔ Optimized GIF Cache
+```json
+"3": {
+  "name": "My GIF",
+  "type": "gif",
+  "value": "assets/gifs/my_animation.gif",
+  "fallback_emoji": "🧸",
+  "particle": "sparkle"
+}
+```
 
-✔ Low Memory Usage
+Setelah mengubah `config.json`, tekan `C` saat aplikasi berjalan.
 
-✔ Stable Tracking
+## 🖼 Supported Assets
 
-✔ 30–60 FPS
+- `.png`
+- `.jpg`
+- `.jpeg`
+- `.webp`
+- `.gif`
+- Unicode emoji
 
-✔ Smooth Animation
+PNG transparan adalah format yang paling disarankan untuk sticker.
 
-✔ Fast Gesture Recognition
+## 🎯 Gesture
 
-</div>
+| Finger Count | Config Key |
+|---:|---|
+| 0 | `"0"` |
+| 1 | `"1"` |
+| 2 | `"2"` |
+| 3 | `"3"` |
+| 4 | `"4"` |
+| 5 | `"5"` |
 
----
+## ⚙ Position & Animation
 
-# 📋 Roadmap
+Ubah bagian:
 
-- ✅ Camera Engine
-- ✅ Hand Tracking
-- ✅ Gesture Detection
-- ✅ GIF Loader
-- ✅ Overlay Engine
-- ✅ Particle System
-- ✅ Animation System
-- ✅ Character Manager
-- ✅ Screenshot
-- ✅ Video Recorder
-- ⏳ Theme Pack
-- ⏳ Face Tracking
-- ⏳ Body Tracking
-- ⏳ AI Gesture Recognition
+```json
+"filter": {
+  "position": "hand",
+  "scale": 0.32,
+  "offset_x": 0,
+  "offset_y": -120,
+  "fade_speed": 4.5,
+  "bounce": true,
+  "floating": true,
+  "rotation": false
+}
+```
 
----
+## 📸 Output
 
-# 🤝 Contributing
+Screenshot dan video tersimpan otomatis di:
 
-Kontribusi sangat diterima.
-
-1. Fork repository
-2. Buat branch baru
-3. Commit perubahan
-4. Push ke branch
-5. Buat Pull Request
-
----
-
-# 📄 License
-
-Project ini menggunakan lisensi **MIT License**.
-
-Silakan digunakan, dimodifikasi, dan dikembangkan sesuai kebutuhan dengan tetap mematuhi lisensi.
-
----
-
-<div align="center">
-
-## 🌸 Made with ❤️ using Python & OpenCV
-
-Jika project ini bermanfaat, jangan lupa berikan ⭐ pada repository.
-
-</div>
+```text
+output/
+```

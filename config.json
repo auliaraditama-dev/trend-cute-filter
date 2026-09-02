@@ -1,0 +1,80 @@
+{
+  "camera": {
+    "index": 0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "mirror": true
+  },
+  "hand_tracking": {
+    "max_hands": 2,
+    "detection_confidence": 0.65,
+    "tracking_confidence": 0.65,
+    "draw_landmarks": true
+  },
+  "gesture": {
+    "stability_seconds": 0.25,
+    "lost_hand_timeout": 0.35
+  },
+  "filter": {
+    "position": "hand",
+    "scale": 0.32,
+    "offset_x": 0,
+    "offset_y": -120,
+    "fade_speed": 4.5,
+    "bounce": true,
+    "floating": true,
+    "rotation": false
+  },
+  "particles": {
+    "enabled": true,
+    "max_particles": 60
+  },
+  "controls": {
+    "quit": "q",
+    "screenshot": "s",
+    "record": "r",
+    "reload": "c",
+    "landmarks": "l"
+  },
+  "gestures": {
+    "0": {
+      "name": "Sleep",
+      "type": "emoji",
+      "value": "😴",
+      "particle": "none"
+    },
+    "1": {
+      "name": "Smile",
+      "type": "emoji",
+      "value": "😊",
+      "particle": "sparkle"
+    },
+    "2": {
+      "name": "Cute Character",
+      "type": "image",
+      "value": "assets/characters/cat.png",
+      "fallback_emoji": "🐱",
+      "particle": "heart"
+    },
+    "3": {
+      "name": "Animated",
+      "type": "gif",
+      "value": "assets/gifs/teddy.gif",
+      "fallback_emoji": "🧸",
+      "particle": "sparkle"
+    },
+    "4": {
+      "name": "Flower",
+      "type": "emoji",
+      "value": "🌸",
+      "particle": "flower"
+    },
+    "5": {
+      "name": "Sparkle",
+      "type": "emoji",
+      "value": "✨",
+      "particle": "sparkle"
+    }
+  }
+}
